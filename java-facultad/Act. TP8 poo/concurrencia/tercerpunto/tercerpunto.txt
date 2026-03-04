@@ -1,0 +1,18 @@
+    Rendimiento: ¿Qué ventaja de rendimiento ofrece un ExecutorService frente a la creación manual
+     de hilos para este problema?
+    El ExecutorService hace que no haga falta crear y destruir hilos manualmente para cada tarea, lo que hace es
+     reutilizar hilos anteriormente creados, esto ayuda a la eficiencia y a la escalabilidad a la hora de realizar 
+     tareas pequeñas.
+
+
+    Recursos: ¿Qué ocurriría si intentaras resolver una multiplicación de matrices de 2000x2000 con
+     el método del Ejercicio 2? ¿Y con el del Ejercicio 3?
+     Con el método del ejercicio 2, necesitaría 4 millones de hilos, mientras que con el método del ejercicio 3, se 
+      usaría una cantidad fija de hilos, y se pondrían en cola 4 millones de tareas.
+
+    Tipos de Pools: Investiga la diferencia entre newFixedThreadPool y newCachedThreadPool.
+     ¿Cuándo podrías preferir uno sobre el otro?
+    En el caso de newFixedThreadPool(n), se mantendrán n hilos en el pool, si llegan más tareas, se pondrán en cola.
+     Es bueno para tareas de cálculo por ejemplo, donde no conviene tener más hilos que procesadores.
+    Por otro lado, en el caso de newCachedThreadPool, se crean hilos según la necesidad, y se van reciclando si quedan inactivos.
+     Lo malo es que puede crecer sin límite, por lo tanto, es bueno para tareas cortas, en dónde no podes predecir cuántas serán.       

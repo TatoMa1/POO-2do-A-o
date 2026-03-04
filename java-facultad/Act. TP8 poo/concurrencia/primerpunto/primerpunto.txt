@@ -1,0 +1,4 @@
+¿por qué suele preferirse implements Runnable a extends Thread?
+
+Permite que la clase herede de otra clase (Java no permite herencia múltiple).
+Separa la tarea (lógica) del mecanismo de ejecución (Thread), facilitando reutilización y uso con Executors/pools.
